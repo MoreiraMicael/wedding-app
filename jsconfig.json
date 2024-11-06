@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "~~/*": ["./*"],
+      "@@/*": ["./*"]
+    },
+    "types": ["node", "estree", "http-proxy", "json-schema"],  // Explicitly specify types
+    "typeRoots": [
+      "./node_modules/@types",  // Point to the @types folder
+      "./types"                 // Optional: any custom types folder
+    ]
+  },
+  "exclude": ["node_modules", ".nuxt", "dist"]
+}
