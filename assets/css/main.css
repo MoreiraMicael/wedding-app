@@ -1,0 +1,135 @@
+/* Ensure html and body fill the viewport */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Mobile-first Base Styling */
+body {
+    font-family: 'Playfair Display', Georgia, serif;
+    background-color: #fff; /* remain light */
+    color: #333;
+}
+
+.container {
+    padding: 1rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    /* Fills the entire viewport height */
+    /* Add a subtle background pattern overlay (using a transparent SVG background) */
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='1' fill='%23f8c0c0' /%3E%3C/svg%3E");
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #cddbbf, #f8c0c0); /* pale sage green to pale pink gradient */
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(0,0,0,0.1); /* subtle decorative border */
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    margin-bottom: 1rem;
+}
+
+nav a {
+    color: #555; /* muted tone for elegant appearance */
+    text-decoration: none;
+}
+
+/* Footer default for mobile: part of normal flow */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8c0c0; /* pale pink */
+    border-top: 1px solid rgba(0,0,0,0.1);
+    /* Note: static positioning lets it appear after content */
+}
+
+/* Responsive Adjustments */
+@media (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0 1rem;
+    }
+
+    /* Enhance header spacing on larger screens */
+    header {
+        padding: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    /* Fix the footer at the bottom on desktop */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0 1rem;
+    }
+
+    header {
+        padding: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    /* Fix the footer at the bottom on desktop */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    /* Ensure main content is not overlapped by the fixed footer */
+    .container {
+        padding-bottom: 80px;
+        /* adjust based on footer height */
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        padding: 2rem;
+        font-size: 1.4rem;
+    }
+
+    body {
+        font-size: 1.1rem;
+    }
+}
+
+/* Optional: Ultra-wide screen adjustments */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+}
