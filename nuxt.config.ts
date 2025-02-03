@@ -5,6 +5,6 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   ssr: false,
   app: {
-    baseURL: 'Wed'
+    baseURL: '/wedding-app/'
   },
 })
