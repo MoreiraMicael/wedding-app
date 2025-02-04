@@ -1,7 +1,7 @@
 {
   "name": "nuxt-app",
   "version": "0.2.0",
-  "homepage": "https://moreiramicael.github.io/wedding-app",
+  "homepage": "https://moreiramicael.github.io/wedding-app/",
   "private": true,
   "type": "module",
   "scripts": {

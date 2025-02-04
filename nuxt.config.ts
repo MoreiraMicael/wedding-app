@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   ssr: false,
+  // Re-enable the baseURL setting for GitHub Pages:
   app: {
     baseURL: '/wedding-app/'
   },
